@@ -6,7 +6,7 @@ from routes.schemes import router as schemes_router
 from routes.voice import router as voice_router
 
 app = FastAPI(
-    title="KrishiMitra API",
+    title="FarmBridge AI",
     description="AI-powered agricultural assistance for Karnataka farmers",
     version="1.0.0"
 )
@@ -27,7 +27,7 @@ app.include_router(voice_router, prefix="/api", tags=["Voice"])
 @app.get("/")
 async def root():
     return {
-        "app": "KrishiMitra API",
+        "app": "FarmBridge AI",
         "status": "running",
         "docs": "/docs"
     }
